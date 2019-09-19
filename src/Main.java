@@ -9,14 +9,11 @@ import java.util.Scanner;
  */
 public class Main {
 	public static void main(String[] args) {
-		int fuelLeft;
-		double usagePerHundred;
-
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Please enter the fuel remaining: ");
-		fuelLeft = scanner.nextInt();
+		int fuelLeft = scanner.nextInt();
 		System.out.print("Please enter your car's fuel consumption (per 100 km.): ");
-		usagePerHundred = Double.parseDouble(scanner.next());
+		double usagePerHundred = Double.parseDouble(scanner.next());
 
 		int distanceRemaining = (int) (fuelLeft * 100 / usagePerHundred);
 		System.out.println("With " + fuelLeft + " L of fuel left and " + usagePerHundred + " L used per 100 km Your " +
